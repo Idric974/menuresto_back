@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const cartesCtrl = require("../controllers/cartes");
+const cartesCtrl = require("../controllers/cartesController");
 const auth = require("../middleware/auth");
 const multer = require("../middleware/multer-config");
 

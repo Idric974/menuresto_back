@@ -1,9 +1,9 @@
 //*✅👉Implémentation des routes CRUD (Create, Read, Update, Delete)
 
 //*✅👉 Configuration.
-const Sauces = require("../models/Sauces");
+const Sauces = require("../models/cartesModel");
 const fs = require("fs");
-const { post } = require("../routes/User");
+//const { post } = require("../routes/User");
 //*➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 
 //*✅👉Create : créer une nouvelle carte
@@ -11,7 +11,7 @@ exports.create = (req, res, next) => {
   const cartesObject = JSON.parse(req.body.carte);
 
   const cartes = new Cartes({
-    ...saucesObject,
+    ...cartesObject,
     imageUrl: `${req.protocol}://${req.get("host")}/images/${
       req.file.filename
     }`,
